@@ -22,6 +22,6 @@ Esta atividade faz parte da **Prova 2**, que totaliza **8 pontos**. Os **2 ponto
 
 ## 🚀 Como Executar
 1. Abra o terminal na pasta do projeto.  
-2. Compile o código com: gcc QX.c -o programa
+2. Compile o código com, sem "X" o número da questão: gcc QX.c -o programa 
 3. Execute com: .\programa.exe
 4. Siga as instruções exibidas no terminal.
