@@ -2,7 +2,6 @@
 // Objetivo: Calcular a Razão de Eficiência de N e imprimir o resultado com duas casas decimais de precisão
 
 #include <stdio.h>
-#include <math.h>
 
 void fatorar(int N, int fatores[], int expoentes[], int *numFatores) {
     int n = N;
@@ -19,7 +18,7 @@ void fatorar(int N, int fatores[], int expoentes[], int *numFatores) {
         i++;
     }
 
-    for (int d = 3; d*d <= n; d += 2) {
+    for (int d = 3; d * d <= n; d += 2) {
         count = 0;
         while (n % d == 0) {
             count++;
@@ -42,7 +41,7 @@ void fatorar(int N, int fatores[], int expoentes[], int *numFatores) {
 
     printf("Fatores primos de %d:\n", N);
     for (int j = 0; j < i; j++) {
-        printf("%d^%d\n", fatores[j], expoentes[j]);
+        printf("  %d^%d\n", fatores[j], expoentes[j]);
     }
 }
 
@@ -75,6 +74,20 @@ int main() {
     printf("Digite um numero inteiro N: ");
     scanf("%d", &N);
 
+    if (N < 1) {
+        printf("Erro: N deve ser maior ou igual a 1.\n");
+        return 1;
+    }
+
+    // Caso especial N = 1
+    if (N == 1) {
+        printf("Fatores primos de 1:\n");
+        printf("Tau(1) = 1\n");
+        printf("Sigma(1) = 1\n");
+        printf("Razao de eficiencia: 1.00\n");
+        return 0;
+    }
+
     int fatores[100];
     int expoentes[100];
     int numFatores;
@@ -87,7 +100,7 @@ int main() {
     int sigma = calcularSigma(fatores, expoentes, numFatores);
     printf("Sigma(N) = %d\n", sigma);
 
-    double razao = (tau + sigma) / (double)N;
+    double razao = sigma / (double)tau;
     printf("Razao de eficiencia: %.2lf\n", razao);
 
     return 0;
