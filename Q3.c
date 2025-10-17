@@ -70,6 +70,12 @@ int calcularSigma(int fatores[], int expoentes[], int numFatores) {
 }
 
 int main() {
+    
+    printf("=====\n");
+    printf("Feito por: Camila Costa de Souza Careli\n");
+    printf("Matricula: 221007582\n");
+    printf("=====\n");
+
     int N;
     printf("Digite um numero inteiro N: ");
     scanf("%d", &N);
