@@ -51,9 +51,9 @@ int main() {
 
     printf("O MMC dos ciclos e: %d\n", resultadoMMC);
     if (resultadoMMC <= 50) {
-        printf("As chaves sincronizam dentro do limite de 50 unidades\n");
+        printf("As chaves sincronizam dentro do limite de 50 anos\n");
     } else {
-        printf("Impossivel sincronizar dentro do limite de 50 unidades\n");
+        printf("Impossivel sincronizar dentro do limite de 50 anos\n");
     }
 
     return 0;
